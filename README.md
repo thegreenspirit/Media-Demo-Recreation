@@ -12,7 +12,7 @@ You first need to symlink [GameAPI](https://github.com/Rubberduckycooly/GameAPI)
 Once your build is successfully finished, copy or move the following in the ``build`` folder:<br>
 * The ``Data`` folder
 * The ``mod.ini``
-* And most importantly, the ``MediaDemoRecreation.dll``.
+* And most importantly, the ``MediaDemoRecreation.dll``.<br>
 Once your done, make a new folder in your decomp's ``mods`` folder and paste it in there.<br>
 Or, just download the release pre-built ones I guess.
 # Special Thanks
