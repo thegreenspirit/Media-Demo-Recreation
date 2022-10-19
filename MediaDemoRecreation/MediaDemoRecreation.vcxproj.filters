@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\GameAPI\C\GameAPI\Game.c">
+      <Filter>GameAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Menu\UIPicture.c">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Title\TitleSetup.c">
+      <Filter>Source Files\Objects\Title</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Helpers\TimeAttackData.c">
+      <Filter>Source Files\Objects\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Global\ActClear.c">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Global\PauseMenu.c">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Global\Player.c">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Global\StarPost.c">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Menu\UIButton.c">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Global\ItemBox.c">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="Objects\Global\GameOver.c">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\GameAPI\C\GameAPI\Game.h">
+      <Filter>GameAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameAPI\C\GameAPI\GameLink.h">
+      <Filter>GameAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameAPI\C\GameAPI\GameObjects.h">
+      <Filter>GameAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameAPI\C\GameAPI\GameVariables.h">
+      <Filter>GameAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Menu\UIPicture.h">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\Zone.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\Animals.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\HUD.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\Player.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\Camera.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Menu\MenuParam.h">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Title\TitleSetup.h">
+      <Filter>Source Files\Objects\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Title\TitleLogo.h">
+      <Filter>Source Files\Objects\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\APICallback.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\Music.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Title\TitleSonic.h">
+      <Filter>Source Files\Objects\Title</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Menu\DemoMenu.h">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Helpers\TimeAttackData.h">
+      <Filter>Source Files\Objects\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\ActClear.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\PauseMenu.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Menu\UIControl.h">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\StarPost.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\SaveGame.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Menu\UIButton.h">
+      <Filter>Source Files\Objects\Menu</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\ItemBox.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\DebugMode.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Global\GameOver.h">
+      <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GameAPI">
+      <UniqueIdentifier>{9bee33db-1f33-4576-ab0b-90e0a420c22e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9462b917-055e-442f-9828-190cdecb8487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects">
+      <UniqueIdentifier>{522f04fe-04e7-45ad-a1f0-f92b00002231}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Menu">
+      <UniqueIdentifier>{f187fe00-f8b8-40e8-a2ce-9d275d04502c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Global">
+      <UniqueIdentifier>{e947b864-82c2-4247-9138-158184cc6bdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Helpers">
+      <UniqueIdentifier>{04934a54-c52b-480c-b550-6bbda00ac886}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Objects\Title">
+      <UniqueIdentifier>{d8520c2e-57b8-4b49-b03e-f131ea6e882a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

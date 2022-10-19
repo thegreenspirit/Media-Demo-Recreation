@@ -1,0 +1,71 @@
+#ifndef OBJ_MENUPARAM_H
+#define OBJ_MENUPARAM_H
+
+#include "GameAPI/Game.h"
+
+typedef enum {
+    BSS_SELECTION_NONE,
+    BSS_SELECTION_EXTRAS,
+} BSSSelectionType;
+
+typedef enum {
+    PUYO_SELECTION_NONE,
+    PUYO_SELECTION_VS_CPU,
+    PUYO_SELECTION_VS_2P,
+    PUYO_SELECTION_TIE_BREAKER,
+} PuyoSelectionFlags;
+
+typedef enum {
+    CREDITS_SELECTION_NONE,
+    CREDITS_SELECTION_EXTRAS,
+} CreditsSelectionType;
+
+typedef enum {
+    EXTRAS_SELECTION_BSS,
+    EXTRAS_SELECTION_PUYO,
+    EXTRAS_SELECTION_DAGARDEN,
+    EXTRAS_SELECTION_CREDITS,
+} ExtrasSelectionIDs;
+
+// Object Class
+typedef struct {
+    RSDK_OBJECT
+} ObjectMenuParam;
+
+// Entity Class
+typedef struct {
+    RSDK_ENTITY
+    uint8 puyoSelection;
+    uint8 bssSelection;
+    char menuTag[0x100];
+    int32 menuSelection;
+    bool32 startedTAAttempt; // only used in pre-plus, goes unused by the time plus rolled around
+    bool32 inTimeAttack;
+    int32 replayID;
+    int32 characterID;
+    int32 zoneID;
+    int32 actID;
+    int32 timeAttackRank;
+#if MANIA_USE_PLUS
+    bool32 isEncoreMode;
+    int32 replayUUID;
+    bool32 viewReplay;
+    bool32 showGhost;
+    uint8 selectedReplay;
+    uint8 replayRankID;
+#else
+    int32 timeScore;
+#endif
+    int32 unused2;
+    int32 unused3;
+    int32 unused4;
+    int32 unused5;
+    int32 vsZoneID;
+    int32 vsActID;
+    int32 creditsReturnToMenu;
+} EntityMenuParam;
+
+// Object Struct
+extern ObjectMenuParam *MenuParam;
+
+#endif //! OBJ_MENUPARAM_H
