@@ -1,5 +1,9 @@
-# Sonic Mania: Media Demo Recreation
-![titlewithdemomenu](https://user-images.githubusercontent.com/111328261/196762558-f1428ce6-084b-4dcf-9522-d69124df94a2.gif)<br>
+<h1 align="center">« Sonic Mania: Media Demo Recreation »</h1>
+<p align="center">
+  <img width="512px" src="https://user-images.githubusercontent.com/111328261/196762558-f1428ce6-084b-4dcf-9522-d69124df94a2.gif"><br>
+  <i align="center">Hey Lois, its the DemoMenu running properly in the decomp!</i>
+</p>
+
 A Mania Decomp mod that overhauls the whole game to recreate the first Mania demos that were shown to the public (a.k.a. "Media Demo").<br>
 If you never knew whats the Media Demo, here are a few honorable mentions:
 * Demo contains 2 early stages, **Green Hill Zone 1** & **Studiopolis 1**
