@@ -104,7 +104,7 @@ void TitleSetup_State_CreateDemoMenu(void)
     RSDK_THIS(TitleSetup);
 
     if (++self->timer == 20) {
-        RSDK.PlayStream("MainMenu.ogg", Music->channelID, 0, 198430, false);
+        RSDK.PlayStream("MainMenu.ogg", Music->channelID, 0, 196028, false);
         CREATE_ENTITY(DemoMenu, NULL, 0, 0);
         self->state = TitleSetup_Dummy;
     }
