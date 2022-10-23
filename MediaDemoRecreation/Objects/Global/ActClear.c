@@ -292,5 +292,10 @@ void ActClear_ExitActClear(void)
         RSDK.SetScene("Presentation", "Thanks For Playing");
         self->state = StateMachine_None;
         Zone_StartFadeOut(10, 0x000000);
+
+        SaveRAM* saveRAM = SaveGame_GetSaveRAM();
+        saveRAM->lives = 3;
+        saveRAM->score = 0;
+        saveRAM->score1UP = 0;
     }
 }
