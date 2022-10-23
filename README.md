@@ -20,7 +20,10 @@ Once your build is successfully finished, copy or move the following in the ``bu
 * And most importantly, the ``MediaDemoRecreation.dll``.<br>
 
 Then, make a new folder in your decomp's ``mods`` folder and paste it in there.<br>
-Or, just download the release pre-built ones I guess.
+Or, just download the release pre-built ones I guess. (Building is recommended, though)
 
-# Special Thanks
+# Credits
+* Me ([thegreenspirit](https://github.com/thegreenspirit)) for doing all the coding stuff and adding music & textures
+* [LittlePlanetCD](https://github.com/LittlePlanetCD) for tweaking GHZ1 and teeny bits of the music
+* BladeOfChaos for letting me use their Sonic spritesheet
 * Everyone in the [Retro Engine Modding Server (REMS)](https://dc.railgun.works/retroengine) for helping me out on some issues I've encountered, and just giving me support on this tiny project overall.
