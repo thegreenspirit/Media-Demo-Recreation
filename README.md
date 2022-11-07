@@ -15,7 +15,7 @@ If you never knew whats the Media Demo, here are a few honorable mentions:
 # How to setup the Mod
 You first need to symlink [GameAPI](https://github.com/Rubberduckycooly/GameAPI) then build ``MediaDemoRecreation.sln``.<br>
 Once your build is successfully finished, copy or move the following in the ``build`` folder:<br>
-* The ``Data`` folder
+* The entire ``Data`` folder
 * The ``mod.ini``
 * And most importantly, the ``MediaDemoRecreation.dll``.<br>
 
@@ -24,6 +24,6 @@ Or, just download the release pre-built ones I guess. (Building is recommended, 
 
 # Credits
 * Me ([thegreenspirit](https://github.com/thegreenspirit)) for doing all the coding stuff and adding music & textures
-* [LittlePlanetCD](https://github.com/LittlePlanetCD) for tweaking GHZ1 and teeny bits of the music
-* BladeOfChaos for letting me use their Sonic spritesheet
+* [LittlePlanetCD](https://github.com/LittlePlanetCD) for tweaking GHZ1 and teeny bits of the music to make it more accurate
+* BladeOfChaos for letting me use their Sonic spritesheet (specfically the balancing sprites)
 * Everyone in the [Retro Engine Modding Server (REMS)](https://dc.railgun.works/retroengine) for helping me out on some issues I've encountered, and just giving me support on this tiny project overall.
