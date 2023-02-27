@@ -9,7 +9,6 @@
 #include "Objects/Global/Player.h"
 #include "Objects/Global/SaveGame.h"
 #include "Objects/Global/StarPost.h"
-#include "Objects/Helpers/TimeAttackData.h"
 #include "Objects/Menu/DemoMenu.h"
 #include "Objects/Menu/UIPicture.h"
 #include "Objects/Menu/UIButton.h"
@@ -39,7 +38,6 @@ void InitModAPI(void)
     MOD_REGISTER_OBJECT_HOOK(TitleSonic);
     MOD_REGISTER_OBJECT_HOOK(Music);
     MOD_REGISTER_OBJECT_HOOK(Player);
-    MOD_REGISTER_OBJECT_HOOK(TimeAttackData);
     MOD_REGISTER_OBJECT_HOOK(Zone);
     MOD_REGISTER_OBJECT_HOOK(ActClear);
     MOD_REGISTER_OBJECT_HOOK(PauseMenu);
@@ -100,14 +98,6 @@ void InitModAPI(void)
     TitleSetup_State_WaitForEnter     = Mod.GetPublicFunction(NULL, "TitleSetup_State_WaitForEnter");
     TitleSetup_State_FadeToMenu       = Mod.GetPublicFunction(NULL, "TitleSetup_State_FadeToMenu");
     TitleSetup_State_FadeBlack        = Mod.GetPublicFunction(NULL, "TitleSetup_State_FadeBlack");
-    // TimeAttackData
-#if MANIA_USE_PLUS
-    TimeAttackData_TrackActClear      = Mod.GetPublicFunction(NULL, "TimeAttackData_TrackActClear");
-    TimeAttackData_GetScore           = Mod.GetPublicFunction(NULL, "TimeAttackData_GetScore");
-    TimeAttackData_ConfigureTableView = Mod.GetPublicFunction(NULL, "TimeAttackData_ConfigureTableView");
-#endif
-    TimeAttackData_GetPackedTime      = Mod.GetPublicFunction(NULL, "TimeAttackData_GetPackedTime");
-    TimeAttackData_GetUnpackedTime    = Mod.GetPublicFunction(NULL, "TimeAttackData_GetUnpackedTime");
     // Zone
     Zone_StartFadeOut                 = Mod.GetPublicFunction(NULL, "Zone_StartFadeOut");
     Zone_GetZoneID                    = Mod.GetPublicFunction(NULL, "Zone_GetZoneID");
@@ -121,13 +111,6 @@ void InitModAPI(void)
     Mod.RegisterStateHook(TitleSetup_State_WaitForSonic, TitleSetup_State_WaitForSonic_Hook, false);
     Mod.RegisterStateHook(TitleSetup_State_SetupLogo, TitleSetup_State_SetupLogo_Hook, false);
     Mod.RegisterStateHook(TitleSetup_State_WaitForEnter, TitleSetup_State_WaitForEnter_Hook, false);
-    // TimeAttackData
-    Mod.RegisterStateHook(TimeAttackData_GetPackedTime, TimeAttackData_GetPackedTime_Hook, false);
-    Mod.RegisterStateHook(TimeAttackData_GetUnpackedTime, TimeAttackData_GetUnpackedTime_Hook, false);
-#if MANIA_USE_PLUS
-    Mod.RegisterStateHook(TimeAttackData_TrackActClear, TimeAttackData_TrackActClear_Hook, false);
-    Mod.RegisterStateHook(TimeAttackData_GetScore, TimeAttackData_GetScore_Hook, false);
-#endif
     // PauseMenu
     Mod.RegisterStateHook(PauseMenu_DrawPauseMenu, PauseMenu_DrawPause, true);
     Mod.RegisterStateHook(PauseMenu_Draw_RegularPause, PauseMenu_Draw_Regular, true);

@@ -13,9 +13,6 @@
     <ClCompile Include="Objects\Title\TitleSetup.c">
       <Filter>Source Files\Objects\Title</Filter>
     </ClCompile>
-    <ClCompile Include="Objects\Helpers\TimeAttackData.c">
-      <Filter>Source Files\Objects\Helpers</Filter>
-    </ClCompile>
     <ClCompile Include="Objects\Global\ActClear.c">
       <Filter>Source Files\Objects\Global</Filter>
     </ClCompile>
@@ -90,9 +87,6 @@
     <ClInclude Include="Objects\Menu\DemoMenu.h">
       <Filter>Source Files\Objects\Menu</Filter>
     </ClInclude>
-    <ClInclude Include="Objects\Helpers\TimeAttackData.h">
-      <Filter>Source Files\Objects\Helpers</Filter>
-    </ClInclude>
     <ClInclude Include="Objects\Global\ActClear.h">
       <Filter>Source Files\Objects\Global</Filter>
     </ClInclude>
@@ -119,6 +113,9 @@
     </ClInclude>
     <ClInclude Include="Objects\Global\GameOver.h">
       <Filter>Source Files\Objects\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Objects\Helpers\MathHelpers.h">
+      <Filter>Source Files\Objects\Helpers</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

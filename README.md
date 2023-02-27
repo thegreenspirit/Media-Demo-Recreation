@@ -19,8 +19,7 @@ Once your build is successfully finished, copy or move the following in the ``bu
 * The ``mod.ini``
 * And most importantly, the ``MediaDemoRecreation.dll``.<br>
 
-Then, make a new folder in your decomp's ``mods`` folder and paste it in there.<br>
-ignore the release pls
+Then, make a new folder in your decomp's ``mods`` folder and paste it in there.
 
 # Credits
 * Me ([thegreenspirit](https://github.com/thegreenspirit)) for doing all the coding stuff and adding music & textures

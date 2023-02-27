@@ -181,7 +181,6 @@
     <ClCompile Include="Objects\Global\PauseMenu.c" />
     <ClCompile Include="Objects\Global\Player.c" />
     <ClCompile Include="Objects\Global\StarPost.c" />
-    <ClCompile Include="Objects\Helpers\TimeAttackData.c" />
     <ClCompile Include="Objects\Menu\UIButton.c" />
     <ClCompile Include="Objects\Menu\UIPicture.c" />
     <ClCompile Include="Objects\Title\TitleSetup.c" />
@@ -205,7 +204,7 @@
     <ClInclude Include="Objects\Global\SaveGame.h" />
     <ClInclude Include="Objects\Global\StarPost.h" />
     <ClInclude Include="Objects\Global\Zone.h" />
-    <ClInclude Include="Objects\Helpers\TimeAttackData.h" />
+    <ClInclude Include="Objects\Helpers\MathHelpers.h" />
     <ClInclude Include="Objects\Menu\DemoMenu.h" />
     <ClInclude Include="Objects\Menu\MenuParam.h" />
     <ClInclude Include="Objects\Menu\UIButton.h" />

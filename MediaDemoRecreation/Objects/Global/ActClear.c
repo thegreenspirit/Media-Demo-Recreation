@@ -6,7 +6,6 @@
 #include "Music.h"
 #include "Zone.h"
 #include "SaveGame.h"
-#include "../Helpers/TimeAttackData.h"
 
 ObjectActClear *ActClear;
 ObjectZone *Zone;
@@ -189,35 +188,6 @@ void ActClear_Create(void *data)
 
         EntityPlayer *player1 = RSDK_GET_ENTITY(SLOT_PLAYER1, Player);
         self->targetPlayer    = player1;
-
-        if (Zone_GetZoneID() > ZONE_INVALID) {
-            uint16 time = TimeAttackData_GetPackedTime_Hook(SceneInfo->minutes, SceneInfo->seconds, SceneInfo->milliseconds);
-
-#if MANIA_USE_PLUS
-            StatInfo stat;
-            switch (GET_CHARACTER_ID(1)) {
-                case ID_SONIC: TimeAttackData_TrackActClear_Hook(&stat, Zone_GetZoneID(), Zone->actID, 1, time, player1->rings, player1->score); break;
-                case ID_TAILS: TimeAttackData_TrackActClear_Hook(&stat, Zone_GetZoneID(), Zone->actID, 2, time, player1->rings, player1->score); break;
-                case ID_KNUCKLES: TimeAttackData_TrackActClear_Hook(&stat, Zone_GetZoneID(), Zone->actID, 3, time, player1->rings, player1->score); break;
-                case ID_MIGHTY: TimeAttackData_TrackActClear_Hook(&stat, Zone_GetZoneID(), Zone->actID, 4, time, player1->rings, player1->score); break;
-                default:
-                case ID_RAY:
-                    if ((GET_CHARACTER_ID(1)) == ID_RAY)
-                        TimeAttackData_TrackActClear_Hook(&stat, Zone_GetZoneID(), Zone->actID, 5, time, player1->rings, player1->score);
-                    else
-                        TimeAttackData_TrackActClear_Hook(&stat, Zone_GetZoneID(), Zone->actID, 1, time, player1->rings, player1->score);
-                    break;
-            }
-            API.TryTrackStat(&stat);
-#else
-            switch (GET_CHARACTER_ID(1)) {
-                case ID_SONIC: APICallback_TrackActClear(Zone_GetZoneID(), Zone->actID, 1, time, player1->rings, player1->score); break;
-                case ID_TAILS: APICallback_TrackActClear(Zone_GetZoneID(), Zone->actID, 2, time, player1->rings, player1->score); break;
-                case ID_KNUCKLES: APICallback_TrackActClear(Zone_GetZoneID(), Zone->actID, 3, time, player1->rings, player1->score); break;
-                default: break;
-            }
-#endif
-        }
 
 #if MANIA_USE_PLUS
         if (!ActClear->disableTimeBonus) {
