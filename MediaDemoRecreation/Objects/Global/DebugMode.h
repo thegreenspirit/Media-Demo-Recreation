@@ -26,6 +26,6 @@ typedef struct {
 extern ObjectDebugMode *DebugMode;
 
 // Extra Entity Functions
-void (*DebugMode_AddObject)(uint16 id, void (*draw)(void), void (*spawn)(void));
+extern void (*DebugMode_AddObject)(uint16 id, void (*draw)(void), void (*spawn)(void));
 
 #endif //! OBJ_DEBUGMODE_H

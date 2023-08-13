@@ -62,31 +62,31 @@ void PauseMenu_StageLoad(void);
 
 // Functions
 void PauseMenu_ExitButton(void);
-void (*PauseMenu_ExitButtonCB)(void);
 void PauseMenu_RestartButton(void);
-void (*PauseMenu_RestartButtonCB)(void);
-void PauseMenu_Draw_Regular(void);
-void (*PauseMenu_Draw_RegularPause)(void);
 void PauseMenu_DrawPause(void);
-void (*PauseMenu_DrawPauseMenu)(void);
 void PauseMenu_ExitFade(void);
-void (*PauseMenu_ExitFadeCB)(void);
 void PauseMenu_State_SetupButton(void);
-void (*PauseMenu_State_SetupButtons)(void);
-void PauseMenu_AddUIButton(uint8 id, void* action);
-void (*PauseMenu_AddButton)(void);
+void PauseMenu_AddUIButton(uint8 id, uint8 id2, void* action);
 
-void (*PauseMenu_RestartFadeCB)(void);
-void (*PauseMenu_ActionCB_Button)(void);
-void (*PauseMenu_State_HandleFadeout)(void);
-void (*PauseMenu_State_SetupButtons)(void);
-void (*PauseMenu_SetupMenu)(void);
-void (*PauseMenu_PauseSound)(void);
-void (*PauseMenu_StopSound)(void);
-void (*PauseMenu_IsDisconnected)(void);
-void (*PauseMenu_State_ForcedPause)(void);
-void (*PauseMenu_Draw_ForcePause)(void);
-void (*PauseMenu_State_StartPause)(void);
-void (*PauseMenu_ResumeButtonCB)(void);
+bool32 PauseMenu_Draw_Regular(bool32 skipState);
+
+extern void (*PauseMenu_RestartButtonCB)(void);
+extern void (*PauseMenu_Draw_RegularPause)(void);
+extern void (*PauseMenu_DrawPauseMenu)(void);
+extern void (*PauseMenu_ExitButtonCB)(void);
+extern void (*PauseMenu_ExitFadeCB)(void);
+extern void (*PauseMenu_State_SetupButtons)(void);
+extern void (*PauseMenu_AddButton)(void);
+extern void (*PauseMenu_RestartFadeCB)(void);
+extern void (*PauseMenu_ActionCB_Button)(void);
+extern void (*PauseMenu_State_HandleFadeout)(void);
+extern void (*PauseMenu_SetupMenu)(void);
+extern void (*PauseMenu_PauseSound)(void);
+extern void (*PauseMenu_StopSound)(void);
+extern void (*PauseMenu_IsDisconnected)(void);
+extern void (*PauseMenu_State_ForcedPause)(void);
+extern void (*PauseMenu_Draw_ForcePause)(void);
+extern void (*PauseMenu_State_StartPause)(void);
+extern void (*PauseMenu_ResumeButtonCB)(void);
 
 #endif //! OBJ_PAUSEMENU_H

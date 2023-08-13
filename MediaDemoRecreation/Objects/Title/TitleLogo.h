@@ -48,6 +48,6 @@ typedef struct {
 extern ObjectTitleLogo *TitleLogo;
 
 // Extra Entity Functions
-void (*TitleLogo_SetupPressStart)(void);
+extern void (*TitleLogo_SetupPressStart)(void);
 
 #endif //! OBJ_TITLELOGO_H

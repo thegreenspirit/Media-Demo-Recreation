@@ -102,6 +102,6 @@ typedef struct {
 // Object Struct
 extern ObjectUIControl *UIControl;
 
-void (*UIControl_ProcessInputs)(void);
+extern void (*UIControl_ProcessInputs)(void);
 
 #endif //! OBJ_UICONTROL_H

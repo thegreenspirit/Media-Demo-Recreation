@@ -9,6 +9,7 @@ void StarPost_Update(void)
 
 	StateMachine_Run(self->state);
 
-	if (self->bonusStageID > 0);
-	    self->bonusStageID = 0;
+	if (self->bonusStageID > 0) {
+		self->bonusStageID = 0;
+	}
 }

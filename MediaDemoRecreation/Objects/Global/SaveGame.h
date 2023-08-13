@@ -68,6 +68,6 @@ typedef struct {
 
 extern ObjectSaveGame *SaveGame;
 
-SaveRAM* (*SaveGame_GetSaveRAM)(void);
+extern SaveRAM* (*SaveGame_GetSaveRAM)(void);
 
 #endif //! OBJ_SAVEGAME_H

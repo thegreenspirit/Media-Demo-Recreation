@@ -1,4 +1,5 @@
-#include "GameAPI/Game.h"
+#include "../GameAPI/C/GameAPI/Game.h"
+#include "Objects/Helpers/MathHelpers.h"
 #include "Objects/Global/ActClear.h"
 #include "Objects/Global/DebugMode.h"
 #include "Objects/Global/GameOver.h"
@@ -16,6 +17,55 @@
 #include "Objects/Title/TitleSonic.h"
 #include "Objects/Title/TitleLogo.h"
 
+void (*UIControl_ProcessInputs)(void);
+void (*UIButton_ButtonLeaveCB)(void);
+void (*ActClear_State_SaveGameProgress)(void);
+void (*ActClear_DrawTime)(void);
+void (*ActClear_DrawNumbers)(Vector2 *drawPos, int32 value, int32 digitCount);
+void (*ActClear_State_EnterText)(void);
+void (*DebugMode_AddObject)(uint16 id, void (*draw)(void), void (*spawn)(void));
+void (*GameOver_State_ExitLetters)(void);
+void (*ItemBox_DebugDraw)(void);
+void (*ItemBox_DebugSpawn)(void);
+void (*PauseMenu_ExitButtonCB)(void);
+void (*PauseMenu_RestartButtonCB)(void);
+void (*PauseMenu_Draw_RegularPause)(void);
+void (*PauseMenu_DrawPauseMenu)(void);
+void (*PauseMenu_ExitFadeCB)(void);
+void (*PauseMenu_State_SetupButtons)(void);
+void (*PauseMenu_AddButton)(void);
+void (*PauseMenu_RestartFadeCB)(void);
+void (*PauseMenu_ActionCB_Button)(void);
+void (*PauseMenu_State_HandleFadeout)(void);
+void (*PauseMenu_SetupMenu)(void);
+void (*PauseMenu_PauseSound)(void);
+void (*PauseMenu_StopSound)(void);
+void (*PauseMenu_IsDisconnected)(void);
+void (*PauseMenu_State_ForcedPause)(void);
+void (*PauseMenu_Draw_ForcePause)(void);
+void (*PauseMenu_State_StartPause)(void);
+void (*PauseMenu_ResumeButtonCB)(void);
+void (*Player_GiveScore)(void);
+void (*Player_State_OuttaHere)(void);
+void (*Player_State_Death)(void);
+void (*Player_State_Drown)(void);
+void (*Player_LoadSprites)(void);
+void (*Player_LoadSpritesVS)(void);
+SaveRAM* (*SaveGame_GetSaveRAM)(void);
+void (*TitleLogo_SetupPressStart)(void);
+void (*TitleSetup_State_WaitForSonic)(void);
+void (*TitleSetup_State_SetupLogo)(void);
+void (*TitleSetup_State_WaitForEnter)(void);
+void (*TitleSetup_State_FadeToMenu)(void);
+void (*TitleSetup_State_FadeBlack)(void);
+void (*UIButton_State_HandleButtonLeave)(void);
+void (*UIButton_State_HandleButtonEnter)(void);
+void (*UIButton_State_Selected)(void);
+void (*UIButton_ButtonLeaveCB)(void);
+void* (*UIButton_GetActionCB)(void);
+EntityUIButton* (*UIButton_GetChoicePtr)(EntityUIButton* button, int32 selection);
+
+
 #if RETRO_USE_MOD_LOADER
 DLLExport bool32 LinkModLogic(EngineInfo *info, const char *id);
 #endif
@@ -23,7 +73,7 @@ DLLExport bool32 LinkModLogic(EngineInfo *info, const char *id);
 void InitModAPI(void) 
 { 
     // Overload regular states
-    MOD_REGISTER_OBJ_OVERLOAD(ActClear, NULL, NULL, NULL, ActClear_Draw, ActClear_Create, NULL, NULL, NULL, NULL, NULL);
+    MOD_REGISTER_OBJ_OVERLOAD(ActClear, NULL, NULL, NULL, ActClear_Draw, ActClear_Create, NULL, NULL, NULL, NULL);
     MOD_REGISTER_OBJ_OVERLOAD(UIButton, UIButton_Update, NULL, NULL, UIButton_Draw, NULL, NULL, NULL, NULL, NULL);
     MOD_REGISTER_OBJ_OVERLOAD(UIPicture, NULL, NULL, NULL, NULL, UIPicture_Create, NULL, NULL, NULL, NULL);
     MOD_REGISTER_OBJ_OVERLOAD(Player, NULL, NULL, NULL, NULL, NULL, Player_StageLoad, NULL, NULL, NULL);
