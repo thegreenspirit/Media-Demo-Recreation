@@ -13,9 +13,7 @@ void UIButton_Update(void)
         self->highlightVisible = false;
     }
 
-    if (self->textFrames != self->textFrames || self->startListID != self->listID || self->startFrameID != self->frameID
-        || self->isDisabled != self->disabled)
-    {
+    if (self->textFrames != self->textFrames || self->startListID != self->listID || self->startFrameID != self->frameID || self->isDisabled != self->disabled) {
         self->textFrames = self->textFrames;
         self->startListID = self->listID;
         self->startFrameID = self->frameID;
@@ -41,7 +39,6 @@ void UIButton_Draw(void)
     RSDK_THIS(UIButton);
 
     Vector2 drawPos;
-    int32 width = (self->size.x + self->size.y) >> 16;
 
     drawPos.x = self->position.x + ScreenInfo->center.x;
     drawPos.y = self->position.y + ScreenInfo->center.y;

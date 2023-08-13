@@ -74,7 +74,7 @@ extern ObjectItemBox *ItemBox;
 void ItemBox_StageLoad(void);
 
 // Extra Entity Functions
-void (*ItemBox_DebugDraw)(void);
-void (*ItemBox_DebugSpawn)(void);
+extern void (*ItemBox_DebugDraw)(void);
+extern void (*ItemBox_DebugSpawn)(void);
 
 #endif //! OBJ_ITEMBOX_H

@@ -452,12 +452,12 @@ typedef struct {
 extern ObjectPlayer *Player;
 
 void Player_StageLoad(void);
-void (*Player_GiveScore)(void);
-void (*Player_State_OuttaHere)(void);
-void (*Player_State_Death)(void);
-void (*Player_State_Drown)(void);
+extern void (*Player_GiveScore)(void);
+extern void (*Player_State_OuttaHere)(void);
+extern void (*Player_State_Death)(void);
+extern void (*Player_State_Drown)(void);
 void Player_SetOuttaHere(void);
-void (*Player_LoadSprites)(void);
-void (*Player_LoadSpritesVS)(void);
+extern void (*Player_LoadSprites)(void);
+extern void (*Player_LoadSpritesVS)(void);
 
 #endif //! OBJ_PLAYER_H

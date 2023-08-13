@@ -34,6 +34,6 @@ extern ObjectGameOver *GameOver;
 
 // Extra Entity Functions
 void GameOver_State_Exit(void);
-void (*GameOver_State_ExitLetters)(void);
+extern void (*GameOver_State_ExitLetters)(void);
 
 #endif //! OBJ_GAMEOVER_H

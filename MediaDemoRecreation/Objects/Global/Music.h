@@ -82,6 +82,6 @@ typedef struct {
 extern ObjectMusic *Music;
 
 // Extra Entity Functions
-void (*Music_FadeOut)(float fadeSpeed);
+extern void (*Music_FadeOut)(float fadeSpeed);
 
 #endif //! OBJ_MUSIC_H

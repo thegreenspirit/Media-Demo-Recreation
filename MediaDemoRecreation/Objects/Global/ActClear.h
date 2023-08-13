@@ -71,10 +71,10 @@ void ActClear_Create(void *data);
 
 // Extra Entity Functions
 void ActClear_ExitActClear(void);
-void (*ActClear_State_SaveGameProgress)(void);
+extern void (*ActClear_State_SaveGameProgress)(void);
 
-void (*ActClear_DrawTime)(void);
-void (*ActClear_DrawNumbers)(void);
-void (*ActClear_State_EnterText)(void);
+extern void (*ActClear_DrawTime)(void);
+extern void (*ActClear_DrawNumbers)(Vector2 *drawPos, int32 value, int32 digitCount);
+extern void (*ActClear_State_EnterText)(void);
 
 #endif //! OBJ_ACTCLEAR_H

@@ -18,11 +18,7 @@ void ActClear_Draw(void)
 
     Vector2 drawPos;
     Vector2 verts[4];
-#if MANIA_USE_PLUS
-    int32 milliseconds = 0;
-    int32 seconds      = 0;
-    int32 minutes      = 0;
-#endif
+
     int32 offset = 0;
 
     drawPos.x  = self->gotThroughPos.x;

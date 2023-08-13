@@ -8,7 +8,6 @@
 #include "../Menu/UIControl.h"
 
 ObjectPauseMenu* PauseMenu;
-ObjectUIButton* UIButton;
 ObjectUIControl* UIControl;
 
 void PauseMenu_Update(void)
@@ -144,7 +143,7 @@ void PauseMenu_AddUIButton(uint8 id, uint8 id2, void* action)
 
     int32 buttonID = self->buttonCount;
     if (buttonID < PAUSEMENU_BUTTON_COUNT) {
-        self->buttonIDs[buttonID] = id,id2;
+        self->buttonIDs[buttonID] = id;
         self->buttonActions[buttonID] = action;
 
         int32 buttonSlot = self->buttonCount + 18;
@@ -179,10 +178,11 @@ void PauseMenu_State_SetupButton(void)
 #else
     if (PauseMenu->controllerDisconnect || PauseMenu->signOutDetected) {
 #endif
-    if (PauseMenu->controllerDisconnect)
-        self->disconnectCheck = PauseMenu_IsDisconnected;
-        self->state = PauseMenu_State_ForcedPause;
-        self->stateDraw = PauseMenu_Draw_ForcePause;
+        if (PauseMenu->controllerDisconnect) {
+            self->disconnectCheck = PauseMenu_IsDisconnected;
+            self->state = PauseMenu_State_ForcedPause;
+            self->stateDraw = PauseMenu_Draw_ForcePause;
+        }
     }
     else {
         RSDK.PlaySfx(PauseMenu->sfxAccept, false, 255);
@@ -213,11 +213,12 @@ void PauseMenu_DrawPause(void)
     RSDK.DrawSprite(&self->animator, &drawPos, false);
 }
 
-void PauseMenu_Draw_Regular(void)
+bool32 PauseMenu_Draw_Regular(bool32 skipState)
 {
     RSDK_THIS(PauseMenu);
 
     if (self->state != PauseMenu_State_HandleFadeout) {
         PauseMenu_DrawPause();
     }
+	return true;
 }

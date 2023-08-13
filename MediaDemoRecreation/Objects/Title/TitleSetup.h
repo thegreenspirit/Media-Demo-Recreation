@@ -31,18 +31,18 @@ typedef struct {
 extern ObjectTitleSetup *TitleSetup;
 
 // Extra Entity Functions
-void (*TitleSetup_State_WaitForSonic)(void);
+extern void (*TitleSetup_State_WaitForSonic)(void);
 void TitleSetup_State_WaitForSonic_Hook(void);
-void (*TitleSetup_State_SetupLogo)(void);
+extern void (*TitleSetup_State_SetupLogo)(void);
 void TitleSetup_State_SetupLogo_Hook(void);
-void (*TitleSetup_State_WaitForEnter)(void);
+extern void (*TitleSetup_State_WaitForEnter)(void);
 void TitleSetup_State_WaitForEnter_Hook(void);
 
 void TitleSetup_State_LogoRise(void);
 void TitleSetup_State_CreateDemoMenu(void);
 void TitleSetup_Dummy(void);
 
-void (*TitleSetup_State_FadeToMenu)(void);
-void (*TitleSetup_State_FadeBlack)(void);
+extern void (*TitleSetup_State_FadeToMenu)(void);
+extern void (*TitleSetup_State_FadeBlack)(void);
 
 #endif //! OBJ_TITLESETUP_H

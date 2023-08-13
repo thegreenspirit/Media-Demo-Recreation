@@ -59,14 +59,14 @@ void UIButton_Draw(void);
 // Extra Entity Functions
 
 void UIButton_State_HideHighlight(void);
-void (*UIButton_State_HandleButtonLeave)(void);
+extern void (*UIButton_State_HandleButtonLeave)(void);
 void UIButton_State_ShowHighlight(void);
-void (*UIButton_State_HandleButtonEnter)(void);
+extern void (*UIButton_State_HandleButtonEnter)(void);
 void UIButton_State_Select(void);
-void (*UIButton_State_Selected)(void);
+extern void (*UIButton_State_Selected)(void);
 
-void (*UIButton_ButtonLeaveCB)(void);
-void* (*UIButton_GetActionCB)(void);
-EntityUIButton* (*UIButton_GetChoicePtr)(EntityUIButton* button, int32 selection);
+extern void (*UIButton_ButtonLeaveCB)(void);
+extern void* (*UIButton_GetActionCB)(void);
+extern EntityUIButton* (*UIButton_GetChoicePtr)(EntityUIButton* button, int32 selection);
 
 #endif //! OBJ_UIBUTTON_H
